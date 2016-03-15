@@ -261,10 +261,7 @@ class BinaryExpr(Expression):
 #
 def quineprove(expr, indent_lvl = 0):
 	def _generate_indent(lvl):
-		indents = []
-		for i in range(lvl):
-			indents.append('\t')
-		return ''.join(indents)
+		return ''.join(['\t' for i in range(lvl)])
 	def _output(msg):
 		print('%s%s' % (_generate_indent(indent_lvl), msg))
 
